@@ -1,17 +1,14 @@
-//
-//  iDineApp.swift
-//  iDine
-//
-//  Created by Color Lines on 6/20/23.
-//
+// https://github.com/twostraws/idine
 
 import SwiftUI
 
 @main
 struct iDineApp: App {
+    @StateObject var order = Order()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .environmentObject(order)
         }
     }
 }
